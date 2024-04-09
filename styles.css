@@ -1,29 +1,19 @@
 body {
-    background-color: lightgray;
+    background-color: #EAEAF4;
     margin: 0;
+    /* overflow: hidden; */
 }
 
 h1 {
     color: white;
-    /* margin-left: 75px; */
-    font-size: 
+    font-size: 55px;
 }
-
-/* .ideaBoxContainer {
-    background-color: #1F1F3C;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-} */
 
 .main {
     display: flex;
     flex-direction: row;
     align-items: stretch;
 }
-
-
-
 
 .ideaBox {
     display: flex;
@@ -32,4 +22,83 @@ h1 {
     width: 20vw;
     justify-content: center;
     background-color: #1F1F3C;
+}
+
+.inputField{
+    display: flex;
+    align-items: center;
+}
+
+/* .inputField label {
+    flex: 0 0 auto;
+}
+.inputField label {
+    flex: 0 0 auto;
+} */
+
+.fields {
+    background-color: #A8AAD2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    padding: 40px;
+}
+
+.emptyBox {
+    background-color: #EAEAF4;
+    display: flex;
+    height: 50vh;
+    width: 100vh;
+}
+
+.spanSave {
+    color: #EAEAF4;
+    font-size: 30px;
+}
+
+.save_button {
+    background-color: #1F1F3C;
+    display: flex;
+    border: 0px;
+    width: 60vw;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.textBoxContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    height: 2rem;
+    width: 60vw;
+    margin-bottom: 10px;
+    border-color: #1F1F3C;
+    border-width: 3px;
+}
+
+.body {
+    height: 4rem;
+    width: 60vw;
+    margin-bottom: 10px;
+    border-color: #1F1F3C;
+    border-width: 3px;
+}
+
+.spanTitle {
+    color:#1F1F3C;
+    font-size: 20px;
+}
+
+.spanBody {
+    color: #1F1F3C;
+    font-size: 20px;
 }
