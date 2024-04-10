@@ -1,3 +1,7 @@
+html {
+    width: 100vw;
+}
+
 body {
     background-color: #EAEAF4;
     margin: 0;
@@ -9,11 +13,9 @@ h1 {
     font-size: 55px;
 }
 
-.main {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-}
+/* .main {
+    font-stretch: expanded;
+} */
 
 .ideaBox {
     display: flex;
@@ -22,6 +24,7 @@ h1 {
     width: 20vw;
     justify-content: center;
     background-color: #1F1F3C;
+    position: fixed;
 }
 
 .inputField{
@@ -41,11 +44,18 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 50vh;
     width: 100vw;
-    padding: 40px;
+    padding-right: 100px;
 }
+
+/* .title,
+.body,
+.save_button {
+    display: flex;
+    align-content: center;
+} */
 
 .emptyBox {
     background-color: #EAEAF4;
@@ -63,11 +73,12 @@ h1 {
     background-color: #1F1F3C;
     display: flex;
     border: 0px;
-    width: 60vw;
+    width: 60.25vw;
     height: 4rem;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    padding: 0px;
 }
 
 .textBoxContainer {
@@ -75,6 +86,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 
 .title {
@@ -83,6 +95,7 @@ h1 {
     margin-bottom: 10px;
     border-color: #1F1F3C;
     border-width: 3px;
+    padding: 0px;
 }
 
 .body {
@@ -91,14 +104,17 @@ h1 {
     margin-bottom: 10px;
     border-color: #1F1F3C;
     border-width: 3px;
+    padding: 0px;
 }
 
 .spanTitle {
     color:#1F1F3C;
     font-size: 20px;
+    padding-right: 10px;
 }
 
 .spanBody {
     color: #1F1F3C;
     font-size: 20px;
+    padding-right: 10px;
 }
