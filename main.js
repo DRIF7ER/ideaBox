@@ -9,11 +9,26 @@ var ideasContainer = document.querySelector('.emptyBox')
 
 
 //~~~~~~~eventListeners go here~~~~~~~//
-saveButton.addEventListener('click', saveIdea)
+saveButton.addEventListener('click', saveIdea);
+titleInput.addEventListener('input', enableSubmit);
+bodyInput.addEventListener('input', enableSubmit);
 
 
 //~~~~~~~functions go here~~~~~~//
+
+
+saveButton.disabled = true;
+
+function enableSubmit(){
+  var isValid = titleInput.value.trim() !== "" && bodyInput.value.trim() !== "";
+  saveButton.disabled = !isValid;
+}
+
 function saveIdea(){
+  if (saveButton.disabled) {
+    return;
+  }
+
   var title = titleInput.value;
   var body = bodyInput.value;
   var newIdea = {
@@ -34,3 +49,4 @@ ideasContainer.appendChild(ideaCard);
 titleInput.value = '';
 bodyInput.value = '';
 }
+

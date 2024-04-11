@@ -123,3 +123,8 @@ h1 {
     grid-row-start: 2;
     grid-row-end: span 2;
 }
+
+.save_button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
