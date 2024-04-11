@@ -1,59 +1,73 @@
-html {
-    width: 100vw;
-}
-
-body {
-    background-color: #EAEAF4;
+html, body {
+    height: 100%;
+    width: 100%;
     margin: 0;
 }
-
-h1 {
-    color: white;
-    font-size: 75px;
+.body {
+    height: 4rem;
+    width: 60vw;
+    margin-bottom: 10px;
+    border-color: #1F1F3C;
+    border-width: 3px;
+    padding: 0px;
 }
-
-.ideaBox {
+.main {
+    background-color: #A8AAD2;
     display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 18vw;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.ideaBoxContainer{
     background-color: #1F1F3C;
-    position: fixed;
+    animation: fade-in 0.5s;
 }
-
-.inputField1{
+.ideaBox{
+    color: white;
+    font-size: 100px;
+    font-weight: 600;
     display: flex;
-    align-items: center;
-    padding-bottom: 50px;
+    justify-content: center;
+    margin: 20px;
 }
-
-
-.fields {
+.rightSideofPage{
+    width: 100%;
+}
+.textBoxContainer,
+.emptyBoxContainer{
+    height: 50%;
+}
+.textBoxContainer {
+    background-color: #A8AAD2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 0.5s;
+}
+.emptyBoxContainer {
+    background-color: #EAEAF4; 
+    display: flex;
+    animation: fade-in 0.5s;
+}
+.emptyBox {
+    border-radius: 4px;
+    display: flex;
+}
+.textBox {
     background-color: #A8AAD2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    height: 50vh;
-    width: 94.6vw;
-    padding-right: 100px;
 }
-
-.emptyBox {
-    background-color: #EAEAF4;
+.inputField1{
     display: flex;
-    height: 50vh;
-    width: 100%;
-    display: grid inline-grid;
-    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
 }
-
 .spanSave {
     color: #EAEAF4;
     font-size: 30px;
 }
-
 .save_button {
     background-color: #1F1F3C;
     display: flex;
@@ -66,15 +80,6 @@ h1 {
     padding: 0px;
     cursor: pointer;
 }
-
-.textBoxContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-}
-
 .title {
     height: 2rem;
     width: 60vw;
@@ -83,48 +88,53 @@ h1 {
     border-width: 3px;
     padding: 0px;
 }
-
-.body {
-    height: 4rem;
-    width: 60vw;
-    margin-bottom: 10px;
-    border-color: #1F1F3C;
-    border-width: 3px;
-    padding: 0px;
-}
-
 .spanTitle {
     color:#1F1F3C;
     font-size: 30px;
     padding-right: 10px;
     padding-bottom: 15px;
 }
-
 .spanBody {
     color: #1F1F3C;
     font-size: 30px;
     padding-right: 10px;
 }
-
 .idea-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 4px solid #1F1F3C;
-    height: 400px;
-    width: 300px;
-    background-color: #FFFFFF;
-    color: #1F1F3C;
-    font-size: 25px;
-    margin: 20px;
-    grid-column-start: 1;
-    grid-column-end: span col4-start;
-    grid-row-start: 2;
-    grid-row-end: span 2;
-}
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid #1F1F3C;
+        height: 35vh;
+        width: 20vw;
+        background-color: #FFFFFF;
+        color: #1F1F3C;
+        font-size: 25px;
+        margin: 20px;
+        border-top-width: 100px;
+    }
 .save_button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+.delete-button {
+    background-color: #1F1F3C;
+    color: #ccc;
+    border: 0px;
+    font-size: 25pt;
+    position: relative;
+    bottom: 16rem;
+    left: 4.5rem;
+}
+
+/* anitmations and effects */
+@keyframes fade-in{
+    0%{
+        opacity:0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
