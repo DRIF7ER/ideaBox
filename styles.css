@@ -20,12 +20,12 @@ html, body {
     padding: 0;
 }
 
-.ideaBoxContainer{
+.ideaBoxContainer {
     background-color: #1F1F3C;
     animation: fade-in 0.5s;
 }
 
-.ideaBox{
+.ideaBox {
     color: white;
     font-size: 100px;
     font-weight: 600;
@@ -34,12 +34,12 @@ html, body {
     margin: 20px;
 }
 
-.rightSideofPage{
+.rightSideofPage {
     width: 100%;
 }
 
 .textBoxContainer,
-.emptyBoxContainer{
+.emptyBoxContainer {
     height: 50%;
 }
 
@@ -71,7 +71,7 @@ html, body {
     align-items: flex-end;
 }
 
-.inputField1{
+.inputField1 {
     display: flex;
     align-items: center;
     padding-bottom: 50px;
@@ -118,22 +118,34 @@ html, body {
 }
 
 .idea-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 4px solid #1F1F3C;
-        height: 35vh;
-        width: 20vw;
-        background-color: #FFFFFF;
-        color: #1F1F3C;
-        font-size: 25px;
-        margin: 20px;
-        position: relative;
-        animation: fade-in 0.5s;
-    }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #1F1F3C;
+    height: 35vh;
+    width: 20vw;
+    background-color: #FFFFFF;
+    color: #1F1F3C;
+    font-size: 25px;
+    margin: 20px;
+    position: relative;
+    animation: fade-in 0.5s;
+}
 
-.idea-card::before{
+.favorite-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 25pt;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.idea-card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -142,6 +154,11 @@ html, body {
     height: 20%;
     background-color: #1F1F3C;
 }
+
+.favorited .favorite-button {
+    color: #e68920; 
+}
+
 .delete-button {
     background-color: #1F1F3C;
     color: #ccc;
@@ -157,14 +174,25 @@ html, body {
     cursor: not-allowed;
 }
 
-/* anitmations and effects */
-@keyframes fade-in{
-    0%{
-        opacity:0;
+/* animations and effects */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
         transform: translateY(20px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translate(0px);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
     }
 }

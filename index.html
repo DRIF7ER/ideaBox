@@ -6,38 +6,38 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-        <style>
+    <style>
         body {
-          font-family: "Sofia", sans-serif;
+            font-family: "Sofia", sans-serif;
         }
-        </style>
+    </style>
 </head>
 <body class="main">
-            <div class="ideaBoxContainer">
-                <div class="ideaBox">
-                    IdeaBox
-                </div>
+<div class="ideaBoxContainer">
+    <div class="ideaBox">
+        IdeaBox
+    </div>
+</div>
+<section class="rightSideofPage">
+    <div class="textBoxContainer">
+        <div class="textBox">
+            <div class="inputField1">
+                <label for="title" class="spanTitle">Title</label>
+                <input id="title_field" type="text" class="title" name="title"/>
             </div>
-            <section class="rightSideofPage">
-                <div class="textBoxContainer">
-                    <div class="textBox">
-                        <div class="inputField1">
-                            <label for="title" class="spanTitle">Title</label>
-                            <input id="title_field" type="text" class="title" name="title"/>
-                        </div>
-                        <div class="inputField2">
-                            <label for="title" class="spanBody">Body</label>
-                            <input id="body_field" type="text" class="body" name="body" />
-                        </div>
-                    <button class="save_button"><span class="spanSave">
-                        Save</span></button>
-                    </div>
-                </div>    
-                <div class="emptyBoxContainer">
-                    <div class="emptyBox">
-                    </div>
-                </div>
-            </section>    
-    <script src="main.js"></script>
+            <div class="inputField2">
+                <label for="title" class="spanBody">Body</label>
+                <input id="body_field" type="text" class="body" name="body" />
+            </div>
+            <button class="save_button"><span class="spanSave">Save</span></button>
+        </div>
+    </div>
+    <div class="emptyBoxContainer">
+        <div class="emptyBox">
+            <!-- Idea cards will be dynamically added here -->
+        </div>
+    </div>
+</section>
+<script src="main.js"></script>
 </body>
 </html>
