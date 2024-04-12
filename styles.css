@@ -3,6 +3,7 @@ html, body {
     width: 100%;
     margin: 0;
 }
+
 .body {
     height: 4rem;
     width: 60vw;
@@ -11,16 +12,19 @@ html, body {
     border-width: 3px;
     padding: 0px;
 }
+
 .main {
     background-color: #A8AAD2;
     display: flex;
     margin: 0;
     padding: 0;
 }
+
 .ideaBoxContainer{
     background-color: #1F1F3C;
     animation: fade-in 0.5s;
 }
+
 .ideaBox{
     color: white;
     font-size: 100px;
@@ -29,13 +33,16 @@ html, body {
     justify-content: center;
     margin: 20px;
 }
+
 .rightSideofPage{
     width: 100%;
 }
+
 .textBoxContainer,
 .emptyBoxContainer{
     height: 50%;
 }
+
 .textBoxContainer {
     background-color: #A8AAD2;
     display: flex;
@@ -43,15 +50,19 @@ html, body {
     align-items: center;
     animation: fade-in 0.5s;
 }
+
 .emptyBoxContainer {
     background-color: #EAEAF4; 
     display: flex;
+    justify-content: space-around;
     animation: fade-in 0.5s;
 }
+
 .emptyBox {
     border-radius: 4px;
     display: flex;
 }
+
 .textBox {
     background-color: #A8AAD2;
     display: flex;
@@ -59,15 +70,18 @@ html, body {
     justify-content: center;
     align-items: flex-end;
 }
+
 .inputField1{
     display: flex;
     align-items: center;
     padding-bottom: 50px;
 }
+
 .spanSave {
     color: #EAEAF4;
     font-size: 30px;
 }
+
 .save_button {
     background-color: #1F1F3C;
     display: flex;
@@ -80,6 +94,7 @@ html, body {
     padding: 0px;
     cursor: pointer;
 }
+
 .title {
     height: 2rem;
     width: 60vw;
@@ -88,17 +103,20 @@ html, body {
     border-width: 3px;
     padding: 0px;
 }
+
 .spanTitle {
     color:#1F1F3C;
     font-size: 30px;
     padding-right: 10px;
     padding-bottom: 15px;
 }
+
 .spanBody {
     color: #1F1F3C;
     font-size: 30px;
     padding-right: 10px;
 }
+
 .idea-card {
         display: flex;
         flex-direction: column;
@@ -111,20 +129,32 @@ html, body {
         color: #1F1F3C;
         font-size: 25px;
         margin: 20px;
-        border-top-width: 100px;
+        position: relative;
+        animation: fade-in 0.5s;
     }
-.save_button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+
+.idea-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #1F1F3C;
 }
 .delete-button {
     background-color: #1F1F3C;
     color: #ccc;
     border: 0px;
     font-size: 25pt;
-    position: relative;
-    bottom: 16rem;
-    left: 4.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.save_button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 /* anitmations and effects */

@@ -39,7 +39,7 @@ function saveIdea(){
   };
   ideas.push(newIdea);
   console.log(newIdea);
-  if (ideas.length > 5) {
+  if (ideas.length > 3) {
     ideasContainer.removeChild(ideasContainer.firstElementChild);
   }
   var ideaCard = document.createElement('div')
