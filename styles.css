@@ -1,50 +1,81 @@
-html {
-    width: 100vw;
-}
-
-body {
-    background-color: #EAEAF4;
+html, body {
+    height: 100%;
+    width: 100%;
     margin: 0;
 }
 
-h1 {
-    color: white;
-    font-size: 75px;
+.body {
+    height: 4rem;
+    width: 60vw;
+    margin-bottom: 10px;
+    border-color: #1F1F3C;
+    border-width: 3px;
+    padding: 0px;
+}
+
+.main {
+    background-color: #A8AAD2;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.ideaBoxContainer {
+    background-color: #1F1F3C;
+    animation: fade-in 0.5s;
 }
 
 .ideaBox {
+    color: white;
+    font-size: 100px;
+    font-weight: 600;
+    margin: 20px;
+}
+.ideaBoxandButton {
     display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 18vw;
+    flex-direction: column;
+}
+.rightSideofPage {
+    width: 100%;
+}
+
+.textBoxContainer,
+.emptyBoxContainer {
+    height: 50%;
+}
+
+.textBoxContainer {
+    background-color: #A8AAD2;
+    display: flex;
     justify-content: center;
-    background-color: #1F1F3C;
-    position: fixed;
-}
-
-.inputField1{
-    display: flex;
     align-items: center;
-    padding-bottom: 50px;
+    animation: fade-in 0.5s;
 }
 
+.emptyBoxContainer {
+    background-color: #EAEAF4; 
+    display: flex;
+    justify-content: space-around;
+    animation: fade-in 0.5s;
+}
 
-.fields {
+.emptyBox {
+    border-radius: 4px;
+    display: flex;
+}
+
+.textBox {
     background-color: #A8AAD2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    height: 50vh;
-    width: 94.6vw;
-    padding-right: 100px;
 }
 
-.emptyBox {
-    background-color: #EAEAF4;
+.inputField1 {
     display: flex;
-    height: 50vh;
-    width: 100%;
+    align-items: center;
+    padding-bottom: 50px;
 }
 
 .spanSave {
@@ -65,25 +96,8 @@ h1 {
     cursor: pointer;
 }
 
-.textBoxContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-}
-
 .title {
     height: 2rem;
-    width: 60vw;
-    margin-bottom: 10px;
-    border-color: #1F1F3C;
-    border-width: 3px;
-    padding: 0px;
-}
-
-.body {
-    height: 4rem;
     width: 60vw;
     margin-bottom: 10px;
     border-color: #1F1F3C;
@@ -102,4 +116,103 @@ h1 {
     color: #1F1F3C;
     font-size: 30px;
     padding-right: 10px;
+}
+
+.idea-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #1F1F3C;
+    height: 35vh;
+    width: 20vw;
+    background-color: #FFFFFF;
+    color: #1F1F3C;
+    font-size: 25px;
+    margin: 20px;
+    position: relative;
+    animation: fade-in 0.5s;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 25pt;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.idea-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #1F1F3C;
+    display: flex;
+}
+
+.favorited .favorite-button {
+    color: #e68920; 
+}
+
+.delete-button {
+    background-color: #1F1F3C;
+    color: #ccc;
+    border: 0px;
+    font-size: 25pt;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.save_button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* animations and effects */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.show-ideas-card {
+    background-color: #A8AAD2;
+    color: #1F1F3C;
+    font-size: 30px;
+    font-weight: bold;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.ideaBoxandButton {
+    display: flex;
+;
 }
